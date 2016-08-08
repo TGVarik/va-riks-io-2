@@ -1,0 +1,16 @@
+{
+  "name": "va-riks-io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ghost": "^0.9.0",
+    "ghost-storage-s3": "^2.0.0",
+    "ghostium": "git+https://github.com/TGVarik/ghostium.git"
+  }
+}
