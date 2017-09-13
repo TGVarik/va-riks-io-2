@@ -1,0 +1,30 @@
+<article itemscope itemtype="http://schema.org/BlogPosting" role="article" class="post-item {{post_class}}">
+  <header class="post-item-header">
+    <h2 itemprop="name" class="post-item-title">
+      <a href="{{url}}" itemprop="url" data-pjax title="{{{title}}}">
+        {{{title}}}
+      </a>
+    </h2>
+  </header>
+  <section itemprop="description" class="post-item-excerpt">
+    <p>{{content words="50"}}&hellip;</p>
+  </section>
+  <footer class="post-item-footer">
+    <ul class="post-item-meta-list">
+      <li class="post-item-meta-item post-item-meta-item-date-published">
+        <time datetime="{{date published_at format="YYYY-MM-DD"}}" itemprop="datePublished">
+          {{date published_at timeago="true"}}
+        </time>
+      </li>
+      {{#if tags}}
+        <li class="post-item-meta-item post-item-meta-item-tags">
+          <i class="fa fa-tags"></i>
+          {{#foreach tags}}
+            <a itemprop="{{#if @first}}articleSection{{else}}keywords{{/if}}" href="{{url}}" data-pjax>{{name}}</a>
+            {{~#if @last}} {{else}}, {{/if}}
+          {{/foreach}}
+        </li>
+      {{/if}}
+    </ul>
+  </footer>
+</article>

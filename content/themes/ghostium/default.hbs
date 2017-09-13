@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{ghost_head}}
+  {{!-- Fonts --}}
+  <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6710912/623586/css/fonts.css"/>
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400&subset=latin,latin-ext"/>
+  <link rel="stylesheet" type="text/css" href="{{asset "css/font-awesome.css"}}"/>
+
+  {{!-- Styles --}}
+  <link rel="stylesheet" type="text/css" href="{{asset "css/pace-theme-minimal.css"}}"/>
+  <link rel="stylesheet" type="text/css" href="{{asset "css/prism-okaidia.css"}}"/>
+  <link rel="stylesheet" type="text/css" href="{{asset "css/prism-autolinker.css"}}"/>
+  <link rel="stylesheet" type="text/css" href="{{asset "css/prism-line-numbers.css"}}"/>
+  <link rel="stylesheet" type="text/css" href="{{asset "css/index.css"}}"/>
+
+  {{!-- Configuration --}}
+  <script type="text/javascript">
+    window.MathJax = {
+      extensions: [
+        'tex2jax.js'
+      ],
+      jax: [
+        'input/TeX',
+        'output/CommonHTML'
+      ],
+      messageStyle: 'none',
+      showMathMenu: false,
+      showMathMenuMSIE: false,
+      showProcessingMessages: false,
+      TeX: {
+        equationNumbers: {
+          autoNumber: 'all'
+        },
+        extensions: [
+          'AMSmath.js',
+          'AMSsymbols.js',
+          'begingroup.js',
+          'noErrors.js',
+          'noUndefined.js',
+        ]
+      },
+      tex2jax: {
+        inlineMath: [
+          ['$', '$'],
+          ['\\(', '\\)']
+        ],
+        processEscapes: true
+      }
+    };
+    window.paceOptions = {
+      catchupTime: 100,
+      minTime: 100,
+      elements: false,
+      restartOnRequestAfter: 500,
+      startOnPageLoad: false
+    };
+  </script>
+
+  {{!-- Head Scripts --}}
+  <script type="text/javascript" src="{{asset "js/modernizr.js"}}"></script>
+  <script type="text/javascript" src="{{asset "js/pace.js"}}"></script>
+
+  {{!-- Ghost outputs important style and meta data with this tag --}}
+  {{ghost_head}}
+
+</head>
+<body class="{{body_class}}">
+<button data-action="open-drawer" id="drawer-button" class="drawer-button">
+  <i class="fa fa-bars"></i>
+</button>
+<nav tabindex="-1" class="drawer">
+  <div class="drawer-container">
+    <ul role="navigation" class="drawer-list">
+      <li class="drawer-list-item">
+        <a href="/" data-pjax>
+          <i class="fa fa-home"></i>Home
+        </a>
+      </li>
+      <li class="drawer-list-item">
+        <a href="{{@blog.url}}/rss/">
+          <i class="fa fa-rss"></i>Subscribe to Feed
+        </a>
+      </li>
+      <li class="drawer-list-divider"></li>
+      <li class="drawer-list-item drawer-list-title">
+        Follow me
+      </li>
+      <li class="drawer-list-item">
+        <a href="https://twitter.com/Qwertz0" target="_blank">
+          <i class="fa fa-twitter"></i>Twitter
+        </a>
+      </li>
+      <li class="drawer-list-item">
+        <a href="https://github.com/tgvarik" target="_blank">
+          <i class="fa fa-github"></i>Github
+        </a>
+      </li>
+      <li class="drawer-list-item">
+        <a href="https://www.linkedin.com/in/tomgvarik" target="_blank">
+          <i class="fa fa-linkedin"></i>Linkedin
+        </a>
+      </li>
+      <li class="drawer-list-item">
+        <a href="https://www.facebook.com/tom.g.varik" target="_blank">
+          <i class="fa fa-facebook"></i>Facebook
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="drawer-overlay"></div>
+<main id="container" role="main" class="container">
+  <div class="surface">
+    <div class="surface-container">
+      <div data-pjax-container class="content">
+        {{{body}}}
+      </div>
+    </div>
+  </div>
+</main>
+
+{{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
+<script type="text/javascript" src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js"></script>
+
+{{!-- Ghost outputs important scripts and data with this tag --}}
+{{ghost_foot}}
+
+{{!-- 3rd Party Scripts --}}
+<script type="text/javascript" src="{{asset "js/jquery.pjax.js"}}"></script>
+<script type="text/javascript" src="{{asset "js/prism.js"}}"></script>
+<script type="text/javascript" src="{{asset "js/prism-autoloader.js"}}"></script>
+<script type="text/javascript" src="{{asset "js/prism-autolinker.js"}}"></script>
+<script type="text/javascript" src="{{asset "js/prism-line-numbers.js"}}"></script>
+<script type="text/javascript">
+  Prism.plugins.autoloader.languages_path = '/assets/js/grammars/';
+  Prism.plugins.autoloader.use_minified = false;
+</script>
+<script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+<script type="text/javascript" src="{{asset "js/three.js"}}"></script>
+<script type="text/javascript" src="{{asset "js/Detector.js"}}"></script>
+<script type="text/javascript" src="{{asset "js/pentagonal.js"}}"></script>
+<script type="text/javascript" src="{{asset "js/readingTime.min.js"}}"></script>
+
+{{!-- The main JavaScript file for the theme --}}
+<script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+
+</body>
+</html>

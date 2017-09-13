@@ -1,0 +1,27 @@
+{
+  "css": [
+    "node_modules/font-awesome/css/font-awesome.css",
+    "node_modules/pace-progress/themes/silver/pace-theme-minimal.css",
+    "node_modules/prismjs/themes/prism-okaidia.css",
+    "node_modules/prismjs/plugins/autolinker/prism-autolinker.css",
+    "node_modules/prismjs/plugins/line-numbers/prism-line-numbers.css"
+  ],
+  "fonts": [
+    "node_modules/font-awesome/fonts/*"
+  ],
+  "js": [
+    "node_modules/ghost/content/themes/casper/assets/js/jquery.fitvids.js",
+    "node_modules/pace-progress/pace.js",
+    "node_modules/@mizchi/jquery-pjax/jquery.pjax.js",
+    "node_modules/prismjs/plugins/autolinker/prism-autolinker.js",
+    "node_modules/prismjs/plugins/autoloader/prism-autoloader.js",
+    "node_modules/prismjs/plugins/line-numbers/prism-line-numbers.js",
+    "node_modules/prismjs/prism.js",
+    "node_modules/reading-time/build/readingTime.min.js",
+    "node_modules/three/build/three.js",
+    "node_modules/three/examples/js/Detector.js"
+  ],
+  "js/grammars": [
+    "node_modules/prismjs/components/!(*.min).js"
+  ]
+}

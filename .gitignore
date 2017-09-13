@@ -1,3 +1,12 @@
 # Created by .ignore support plugin (hsz.mobi)
 node_modules/
 keys.json
+config.development.json
+config.production.json
+content/themes/ghostium/assets/css
+!content/themes/ghostium/assets/css/index.css
+content/themes/ghostium/assets/fonts
+content/themes/ghostium/assets/js
+!content/themes/ghostium/assets/js/index.js
+!content/themes/ghostium/assets/js/pentagonal.js
+yarn-error.log
